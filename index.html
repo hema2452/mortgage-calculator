@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="form-content">
+      <div class="heading-content">
+        <h2>Mortage Calculator</h2>
+        <button onclick="clearAll()">Clear All</button>
+      </div>
+      <div>
+        <form>          
+            <label for="mortage-amount">Mortgage Amount</label>
+            <div class="input-box">
+              <div class="input-box-second">
+                <span class="span" >&#8377</span>
+                <input type="text" name="mortage-amount" id="mortage-amount">
+                  
+
+              </div>
+              <p class="mortage-amount-para"></p> 
+              
+              
+            </div>      
+            
+          
+          <div class="box">    
+            <div>
+              <label for="mortage-term"> Mortgage Term</label>
+              <div class="input-box">
+                <div class="input-box-second">
+                       <input type="text" name="mortage-term" id="mortage-term">
+                       <span class="span">Years</span>
+                </div>             
+          
+                  <p class="mortage-amount-para"></p>    
+  
+           
+              </div>
+          
+            </div>     
+            <div>              
+            <label for="interst-rate">Interest Rate</label>
+            <div class="input-box">   
+              <div class="input-box-second">
+                <input type="text" name="interst-rate" id="interst-rate">
+                <span class="span">%</span> 
+              </div>          
+                <p class="mortage-amount-para"></p>   
+            </div> 
+    
+            </div>   
+          </div>
+          <label for="mortage-type">Mortgage Type</label>
+            <div class="checkbox-container">   
+              <div class="checkbox-container-selection">
+                <input type="radio" name="repayment" id="repayment">
+                <label for="repayment">Repayment</label>
+              </div>    
+              <div>
+                <div class="checkbox-container-selection">                  
+                  <input type="radio" name="repayment" id="interst">
+                  <label for="interst">Interest Only</label>
+                </div> 
+                <p id="error-display"></p>
+
+              </div>
+             
+            </div>
+          <button class="calculate-repayments">
+            <img src="./assets/images/icon-calculator.svg" alt="">
+            Calculate Repayments
+          </button>           
+        </form>
+      </div>
+    </div>
+    <div class="display-content">
+      <div class="result-after">
+      <h2 class="display-content-title" id="result-title">Your results</h2>
+      <p class="display-content-para" id=" result-para">Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.</p>
+        <div id="result-card">
+          <p class="result-title">Your monthly repayments</p>
+          <p id="monthly-emi">&#8377 1,792</p>
+          <div class="border-div">  
+          </div>
+          <p class="result-desc">Total you'll repay over the term</p> 
+          <p id="total-value">&#8377 1,792</p>
+        </div>
+      </div>
+      <div id="result-area">
+        <img src="./assets/images/illustration-empty.svg" alt="">
+        <h1> Results shown here</h1>
+        <p> Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.</p>
+      </div>
+      
+
+    </div>
+  </div>
+      
+  <script src="script.js"></script>
+  
+  
+</body>
+</html>
